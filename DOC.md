@@ -18,3 +18,7 @@ How to create your project yourself
 3. Create .babelrc in the root and copy the contents of the generated file
 4. Create folders src and dist and create source code files
 
+OR
+```
+yarn create react-app hello-antd --template typescript
+```
