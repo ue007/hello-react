@@ -1,11 +1,10 @@
 import * as React from "react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, createRef } from "react";
 import * as ReactDOM from "react-dom";
-
-import { hot } from "react-hot-loader";
 
 class App extends React.Component<Record<string, unknown>, unknown> {
 	myInput?: HTMLInputElement | null;
+	buttonRef = createRef<any>();
 
 	/**
 	 *ComponentLifecycle
@@ -21,7 +20,9 @@ class App extends React.Component<Record<string, unknown>, unknown> {
 	 */
 	componentDidMount() {
 		console.log("hello react: componentDidMount");
-		// eslint-disable-next-line react/no-find-dom-node
+		this.buttonRef.current.addEventListener("click", (e: unknown) => {
+			console.log(e);
+		});
 	}
 
 	/**
@@ -43,6 +44,7 @@ class App extends React.Component<Record<string, unknown>, unknown> {
 	 */
 	componentWillUnmount() {
 		console.log("hello react: componentWillUnmount");
+		this.buttonRef.current.removeEventListener("click");
 	}
 
 	private handleClick() {
@@ -67,20 +69,23 @@ class App extends React.Component<Record<string, unknown>, unknown> {
 						type="text"
 						ref={(ref) => (this.myInput = ref)}
 					></input>
+					<br></br>
 					<input
 						type="button"
 						value="Foucs the text input"
 						onClick={this.handleClick}
 					></input>
+					<br></br>
 					<button onClick={this.handleClick}>
 						Button: Test React Event
 					</button>
+						<br></br>
+					<button ref={this.buttonRef}>Button: Test Origin Event</button>
 				</div>
 			</div>
 		);
 	}
 }
 
-declare let module: Record<string, unknown>;
 
-export default hot(module)(App);
+export default App;

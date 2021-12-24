@@ -37,12 +37,12 @@ class App extends React.Component<Props> {
 		const { name } = this.props;
 		return (
 			<>
-				<h1>Hello {name}</h1>
-				<button onClick={this.handleClick}>
+			<h1>Hello { name } </h1>
+				< button onClick = { this.handleClick } >
 					Button: Test React Event
-				</button>
-				<button ref={this.buttonRef}>Button: Test Origin Event</button>
-			</>
+						< /button>
+						< button ref = { this.buttonRef } > Button: Test Origin Event < /button>
+							< />
 		);
 	}
 }
