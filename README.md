@@ -1,58 +1,53 @@
-# hello-react
+# React Webpack Typescript Starter
+> Minimal starter with hot module replacement (HMR) for rapid development.
 
-Empty project.
+* **[React](https://facebook.github.io/react/)** (17.x)
+* **[Webpack](https://webpack.js.org/)** (5.x)
+* **[Typescript](https://www.typescriptlang.org/)** (4.x)
+* **[Hot Module Replacement (HMR)](https://webpack.js.org/concepts/hot-module-replacement/)** ([React Hot Loader](https://github.com/gaearon/react-hot-loader))
+* Production build script (Webpack)
+* Image loading/minification ([Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader))
+* [SASS](http://sass-lang.com/) support
+* Code linting ([ESLint](https://github.com/eslint/eslint)) and formatting ([Prettier](https://github.com/prettier/prettier))
+* Test framework ([Jest](https://facebook.github.io/jest/))
 
-## Building and running on localhost
+## Installation
+1. Clone/download repo
+2. `yarn install` (or `npm install` for npm)
 
-First install dependencies:
+## Usage
+**Development**
 
-```sh
-npm install
-```
+`yarn run start-dev`
 
-To run in hot module reloading mode:
+* Build app continuously (HMR enabled)
+* App served @ `http://localhost:8080`
 
-```sh
-npm start
-```
+**Production**
 
-To create a production build:
+`yarn run start-prod`
 
-```sh
-npm run build-prod
-```
+* Build app once (HMR disabled) to `/dist/`
+* App served @ `http://localhost:3000`
 
-To create a development build:
+---
 
-```sh
-npm run build-dev
-```
+**All commands**
 
-## Running
+| Command               | Description                                                                   |
+| --------------------- | ----------------------------------------------------------------------------- |
+| `yarn run start-dev`  | Build app continuously (HMR enabled) and serve @ `http://localhost:8080`      |
+| `yarn run start-prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:3000` |
+| `yarn run build`      | Build app to `/dist/`                                                         |
+| `yarn run test`       | Run tests                                                                     |
+| `yarn run lint`       | Run linter                                                                    |
+| `yarn run lint --fix` | Run linter and fix issues                                                     |
+| `yarn run start`      | (alias of `yarn run start-dev`)                                               |
 
-Open the file `dist/index.html` in your browser
+**Note**: replace `yarn` with `npm` in `package.json` if you use npm.
 
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
-
-## How to create your project yourself
-1. Create an NPM project and install dependencies
-```sh
-	mkdir hello-react
-	
-	cd hello-react
-	
-	npm init -y
-	
-	npm install --save-dev webpack webpack-cli typescript ts-loader @hot-loader/
-	react-dom babel-loader @babel/core @babel/preset-env @hot-loader/react-dom 
-	prettier @types/react @types/react-dom @babel/preset-react 
-	webpack-dev-server css-loader less-loader less style-loader url-loader
-	
-	npm install react react-dom react-hot-loader
-   ```
-2. Create webpack.config.js in the root and copy the contents of the generated file
-3. Create .babelrc in the root and copy the contents of the generated file
-4. Create folders src and dist and create source code files
-
+## See also
+* [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
+* [Snowpack](https://github.com/snowpackjs/snowpack)
+* [Create React App](https://github.com/facebook/create-react-app)
+* [Isomorphic Webapp Starter](https://github.com/vikpe/isomorphic-webapp-starter)
