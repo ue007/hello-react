@@ -5,8 +5,8 @@ import List from "./components/List";
 
 class App extends Component {
 	render(): React.ReactNode {
-		const handleItemChange = () => {
-			console.log("handleItemChange");
+		const handleItemChange = (e: any) => {
+			console.log(e);
 		};
 		return (
 			<div className="App">

@@ -39,9 +39,6 @@ class ListItem extends Component<Props, State> {
 		text: "",
 		checked: false,
 	};
-	constructor(props: Props) {
-		super(props);
-	}
 
 	render(): ReactNode {
 		return (
