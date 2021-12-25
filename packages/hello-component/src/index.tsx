@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Clock from "./components/Clock";
+import List from "./components/List";
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -17,11 +18,13 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-function tick() {
+// test clock component
+
+/* function tick() {
 	ReactDOM.render(
 		// <Clock date={new Date()} />,
 		<Clock />,
 		document.getElementById("root"),
 	);
 }
-setInterval(tick, 1000);
+setInterval(tick, 1000); */
