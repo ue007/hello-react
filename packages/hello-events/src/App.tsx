@@ -2,7 +2,10 @@ import * as React from "react";
 import { useEffect, useState, createRef } from "react";
 import * as ReactDOM from "react-dom";
 
-class App extends React.Component<Record<string, unknown>, unknown> {
+type EditorState = {
+	loading?: boolean;
+};
+class App extends React.Component<{}, unknown> {
 	myInput?: HTMLInputElement | null;
 	buttonRef = createRef<any>();
 
@@ -79,13 +82,14 @@ class App extends React.Component<Record<string, unknown>, unknown> {
 					<button onClick={this.handleClick}>
 						Button: Test React Event
 					</button>
-						<br></br>
-					<button ref={this.buttonRef}>Button: Test Origin Event</button>
+					<br></br>
+					<button ref={this.buttonRef}>
+						Button: Test Origin Event
+					</button>
 				</div>
 			</div>
 		);
 	}
 }
-
 
 export default App;
