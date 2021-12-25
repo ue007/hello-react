@@ -53,7 +53,7 @@ class Clock extends Component<Props, State> {
 	render(): ReactNode {
 		return (
 			<div>
-				<h1>Hello, world!</h1>
+				<h1>Hello, Clock!</h1>
 				{/* <h2>It is {this.props.date.toLocaleTimeString()}.</h2> */}
 				<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
 			</div>
