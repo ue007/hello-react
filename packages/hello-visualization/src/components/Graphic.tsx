@@ -28,7 +28,7 @@ class Graphic extends Component<Props, State> {
 	 * 更新
 	 */
 	componentDidUpdate() {
-		console.log('update');
+		// console.log('update');
 		this.draw();
 	}
 
@@ -69,7 +69,7 @@ class Graphic extends Component<Props, State> {
 			<div>
 				<h1>Hello, Clock!</h1>
 				<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-				<canvas ref={this.myCanvas} width={600} height={600}></canvas>
+				<canvas ref={this.myCanvas} width={200} height={200}></canvas>
 			</div>
 		);
 	}
