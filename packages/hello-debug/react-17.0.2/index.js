@@ -9,11 +9,15 @@ function App() {
 			<div>Number: {count}</div>
 			<div>Age: {age}</div>
 			<div>fruit: {fruit}</div>
-			<button onClick={() => {
-				setCount((v) => v + 1);
-				setAge((v) => v + 1);
-				setFruit((v) => v + 1);
-			}}>Increment</button>
+			<button
+				onClick={() => {
+					setCount((v) => v + 1);
+					setAge((v) => v + 1);
+					setFruit((v) => v + 1);
+				}}
+			>
+				Increment
+			</button>
 		</div>
 	);
 }
