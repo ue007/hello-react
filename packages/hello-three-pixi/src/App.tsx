@@ -16,7 +16,7 @@ class App extends Component<{}, {}> {
 						}))
 					}
 				>
-					{isMounted ? "Unmount" : "Mount"}
+					{isMounted ? "Three" : "Pixi"}
 				</button>
 				{isMounted && <PixiComponent />}
 				{!isMounted && <ThreeComponent />}
