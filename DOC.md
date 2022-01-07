@@ -22,3 +22,7 @@ OR
 ```
 yarn create react-app hello-antd --template typescript
 ```
+
+```
+yarn create react-app hello-react-redux --template  redux 
+```
